@@ -5,11 +5,11 @@ from __future__ import print_function
 import random
 
 import numpy as np
-from pybullet_tools.utils import connect, load_model, disconnect, wait_if_gui, create_box, set_point, dump_body, \
+from pb_planning.pybullet_tools import connect, load_model, disconnect, wait_if_gui, create_box, set_point, dump_body, \
     TURTLEBOT_URDF, HideOutput, LockRenderer, joint_from_name, set_euler, get_euler, get_point, \
     set_joint_position, get_joint_positions, pairwise_collision, stable_z, wait_for_duration, get_link_pose, \
     link_from_name, get_pose, euler_from_quat, multiply, invert, draw_pose, unit_point, unit_quat, \
-    remove_debug, get_aabb, draw_aabb, get_subtree_aabb, ROOMBA_URDF, set_all_static, assign_link_colors, \
+    remove_debug, draw_aabb, get_subtree_aabb, set_all_static, assign_link_colors, \
     set_camera_pose, RGBA, draw_point
 
 # RGBA colors (alpha is transparency)

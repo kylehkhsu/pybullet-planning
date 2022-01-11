@@ -8,11 +8,12 @@ import numpy as np
 
 from itertools import product
 
-from pybullet_tools.utils import add_data_path, connect, disconnect, wait_if_gui, load_pybullet, \
+from pb_planning.pybullet_tools import add_data_path, connect, disconnect, wait_if_gui, load_pybullet, \
     draw_global_system, dump_body, enable_gravity, step_simulation, \
     get_time_step, elapsed_time, set_point, Point, set_camera_pose, set_position, create_box, BLUE, synchronize_viewer, \
     set_renderer, irange, INF, create_cylinder, create_sphere, create_capsule, set_euler, get_velocity, create_faces, \
-    STATIC_MASS, mesh_from_points, RED, wait_for_duration
+    STATIC_MASS, mesh_from_points, RED
+
 
 def create_ramp(half_extent=0.5):
     vertices = [Point(s1 * half_extent, s2 * half_extent, 0) for s1, s2 in product([+1, -1], repeat=2)] + \

@@ -4,8 +4,8 @@ from __future__ import print_function
 
 import numpy as np
 
-from pybullet_tools.utils import connect, disconnect, wait_for_user, create_box, dump_body, \
-    get_link_pose, euler_from_quat, RED, set_camera_pose, create_flying_body, create_shape, get_cylinder_geometry, \
+from pb_planning.pybullet_tools import connect, disconnect, wait_for_user, create_box, dump_body, \
+    get_link_pose, RED, set_camera_pose, create_flying_body, create_shape, get_cylinder_geometry, \
     BLUE, get_movable_joints, get_links, SE3, set_joint_positions, \
     plan_joint_motion, add_line, GREEN, intrinsic_euler_from_quat
 

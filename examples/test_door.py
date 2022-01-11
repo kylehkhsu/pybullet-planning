@@ -9,19 +9,18 @@ import argparse
 import numpy as np
 import math
 
-from pybullet_tools.utils import add_data_path, connect, disconnect, wait_if_gui, load_pybullet, \
-    draw_global_system, dump_body, get_sample_fn, get_movable_joints, enable_gravity, step_simulation, \
-    get_time_step, elapsed_time, get_joint_intervals, \
+from pb_planning.pybullet_tools import add_data_path, connect, disconnect, wait_if_gui, load_pybullet, \
+    draw_global_system, dump_body, get_sample_fn, get_movable_joints, elapsed_time, get_joint_intervals, \
     velocity_control_joints, PI, set_point, Point, get_box_geometry, \
     create_shape, set_camera_pose, Pose, base_aligned_z, BLACK, LinkInfo, create_multi_body, \
     Shape, create_shape_array, unzip, STATIC_MASS, set_position, base_aligned, \
-    create_box, BLUE, add_pose_constraint, get_pose, synchronize_viewer, set_renderer, get_cylinder_geometry, \
+    create_box, BLUE, add_pose_constraint, get_pose, set_renderer, get_cylinder_geometry, \
     wait_for_duration, TURTLEBOT_URDF, set_joint_positions, \
-    set_all_color, control_joint, irange, INF, control_joints, get_first_link, point_from_pose, get_link_pose, \
+    set_all_color, control_joint, control_joints, get_first_link, point_from_pose, get_link_pose, \
     get_max_velocities, get_max_forces, interpolate, set_joint_position, get_joint_positions, get_closest_points, \
     draw_collision_info, movable_from_joints, compute_jacobian, get_unit_vector, remove_handles, child_link_from_joint, \
-    set_configuration, unit_point, get_com_pose, get_link_inertial_pose, draw_pose, tform_point, invert, \
-    violates_limits, LockRenderer, get_joint_position, get_base_name, get_body_name
+    set_configuration, draw_pose, tform_point, invert, \
+    violates_limits, get_joint_position, get_body_name
 from .test_ramp import condition_controller, simulate
 
 

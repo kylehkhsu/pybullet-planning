@@ -1,9 +1,8 @@
 import os
 import pybullet as p
 
-from pybullet_tools.utils import create_mesh, set_point, read_pcd_file, disconnect, \
-    wait_if_gui, mesh_from_points, get_links, get_num_links, connect, load_pybullet, \
-    create_obj, WHITE, get_client, NULL_ID, set_color, get_all_links
+from pb_planning.pybullet_tools import create_mesh, read_pcd_file, disconnect, \
+    wait_if_gui, mesh_from_points, connect, create_obj, WHITE, get_client, NULL_ID, set_color, get_all_links
 
 SODA_CLOUD = 'soda.pcd'
 

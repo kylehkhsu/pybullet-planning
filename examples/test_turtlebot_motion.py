@@ -6,7 +6,7 @@ import numpy as np
 import time
 from collections import OrderedDict
 
-from pybullet_tools.utils import TURTLEBOT_URDF, joints_from_names, \
+from pb_planning.pybullet_tools import TURTLEBOT_URDF, joints_from_names, \
     set_joint_positions, get_bodies, sample_placement, pairwise_collision, \
     set_point, Point, create_box, stable_z, TAN, GREY, connect, PI, wait_if_gui, dump_body, set_all_color, BLUE, \
     link_from_name, draw_pose, pose_from_pose2d, \
@@ -29,7 +29,7 @@ from motion_planners.utils import default_selector, irange
 #from motion_planners.tkinter.samplers import get_cost_fn
 from motion_planners.lazy_prm import ROADMAPS
 
-from pybullet_tools.retime import sample_curve
+from pb_planning.pybullet_tools.retime import sample_curve
 
 BASE_LINK_NAME = 'base_link'
 BASE_JOINTS = ['x', 'y', 'theta']

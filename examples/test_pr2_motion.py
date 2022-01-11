@@ -3,16 +3,13 @@
 from __future__ import print_function
 
 import pybullet as p
-import time
-import numpy as np
 
-from pybullet_tools.pr2_utils import TOP_HOLDING_LEFT_ARM, PR2_URDF, DRAKE_PR2_URDF, \
+from pb_planning.pybullet_tools.pr2_utils import TOP_HOLDING_LEFT_ARM, PR2_URDF, DRAKE_PR2_URDF, \
     SIDE_HOLDING_LEFT_ARM, PR2_GROUPS, open_arm, get_disabled_collisions, REST_LEFT_ARM, rightarm_from_leftarm
-from pybullet_tools.utils import set_base_values, joint_from_name, quat_from_euler, set_joint_position, \
-    set_joint_positions, add_data_path, connect, plan_base_motion, plan_joint_motion, enable_gravity, \
-    joint_controller, dump_body, load_model, joints_from_names, wait_if_gui, disconnect, get_joint_positions, \
-    get_link_pose, link_from_name, HideOutput, get_pose, wait_if_gui, load_pybullet, set_quat, Euler, PI, RED, add_line, \
-    wait_for_duration, LockRenderer, base_aligned_z, Point, set_point, get_aabb, stable_z_on_aabb, AABB
+from pb_planning.pybullet_tools import set_base_values, joint_from_name, quat_from_euler, set_joint_positions, add_data_path, connect, plan_base_motion, plan_joint_motion, enable_gravity, \
+    joint_controller, dump_body, load_model, joints_from_names, disconnect, get_link_pose, link_from_name, HideOutput, \
+    wait_if_gui, load_pybullet, set_quat, Euler, PI, RED, add_line, \
+    wait_for_duration, LockRenderer, base_aligned_z, Point, set_point, get_aabb
 
 # TODO: consider making this a function
 SLEEP = None # None | 0.05
@@ -90,7 +87,7 @@ def test_arm_control(pr2, left_joints, arm_start):
 #####################################
 
 def test_ikfast(pr2):
-    from pybullet_tools.ikfast.pr2.ik import get_tool_pose, get_ik_generator
+    from pb_planning.pybullet_tools.ikfast.pr2.ik import get_tool_pose, get_ik_generator
     left_joints = joints_from_names(pr2, PR2_GROUPS['left_arm'])
     #right_joints = joints_from_names(pr2, PR2_GROUPS['right_arm'])
     torso_joints = joints_from_names(pr2, PR2_GROUPS['torso'])

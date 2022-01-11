@@ -7,16 +7,16 @@ import numpy as np
 import pybullet as p
 
 from examples.test_franka import test_retraction
-from pybullet_tools.ikfast.ikfast import get_ik_joints, check_ik_solver
-from pybullet_tools.movo_constants import get_closed_positions, get_open_positions, TOOL_LINK, get_gripper_joints, ARMS, \
-    MOVO_URDF, MOVO_INFOS, RIGHT, get_arm_joints, MOVO_COLOR, BASE_JOINTS
-from pybullet_tools.pr2_utils import get_side_grasps, close_until_collision
-from pybullet_tools.utils import add_data_path, connect, dump_body, load_model, disconnect, wait_if_gui, \
+from pb_planning.pybullet_tools.ikfast.ikfast import get_ik_joints, check_ik_solver
+from pb_planning.pybullet_tools.movo_constants import get_closed_positions, get_open_positions, TOOL_LINK, get_gripper_joints, ARMS, \
+    MOVO_URDF, MOVO_INFOS, RIGHT, get_arm_joints, BASE_JOINTS
+from pb_planning.pybullet_tools.pr2_utils import get_side_grasps, close_until_collision
+from pb_planning.pybullet_tools import add_data_path, connect, dump_body, load_model, disconnect, wait_if_gui, \
     get_sample_fn, set_joint_positions, LockRenderer, link_from_name, HideOutput, \
-    joints_from_names, set_color, get_links, get_max_limits, get_min_limits, get_extend_fn, get_link_pose, \
+    joints_from_names, get_max_limits, get_min_limits, get_extend_fn, get_link_pose, \
     get_joint_names, draw_pose, remove_handles, draw_base_limits, \
     elapsed_time, create_box, RED, \
-    unit_pose, multiply, set_pose, assign_link_colors, set_all_color
+    unit_pose, multiply, set_pose, assign_link_colors
 
 
 def test_close_gripper(robot, arm):

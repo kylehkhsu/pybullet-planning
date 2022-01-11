@@ -2,11 +2,11 @@
 
 from __future__ import print_function
 
-from pybullet_tools.kuka_primitives import BodyPose, BodyConf, Command, get_grasp_gen, \
+from pb_planning.pybullet_tools import BodyPose, BodyConf, Command, get_grasp_gen, \
     get_ik_fn, get_free_motion_gen, get_holding_motion_gen
-from pybullet_tools.utils import WorldSaver, enable_gravity, connect, dump_world, set_pose, \
-    draw_global_system, draw_pose, set_camera_pose, Pose, Point, set_default_camera, stable_z, \
-    BLOCK_URDF, load_model, wait_if_gui, disconnect, DRAKE_IIWA_URDF, wait_if_gui, update_state, disable_real_time, HideOutput
+from pb_planning.pybullet_tools import WorldSaver, enable_gravity, connect, dump_world, set_pose, \
+    draw_global_system, Pose, Point, set_default_camera, stable_z, \
+    BLOCK_URDF, load_model, disconnect, DRAKE_IIWA_URDF, wait_if_gui, update_state, disable_real_time, HideOutput
 
 
 def plan(robot, block, fixed, teleport):

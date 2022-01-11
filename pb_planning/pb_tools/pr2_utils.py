@@ -444,7 +444,7 @@ GET_GRASPS = {
 
 # Inverse reachability
 
-DATABASES_DIR = '../databases'
+DATABASES_DIR = '../../databases'
 IR_FILENAME = '{}_{}_ir.pickle'
 IR_CACHE = {}
 

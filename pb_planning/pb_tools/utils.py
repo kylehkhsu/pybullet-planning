@@ -1628,6 +1628,7 @@ def invert(pose):
     point, quat = pose
     return p.invertTransform(point, quat)
 
+# TODO: this seems broken for >= 3 poses?
 def multiply(*poses):
     pose = poses[0]
     for next_pose in poses[1:]:

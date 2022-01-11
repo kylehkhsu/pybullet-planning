@@ -1,8 +1,8 @@
 import math
 import numpy as np
 
-from pybullet_tools.utils import safe_zip, clip, INF, \
-    waypoints_from_path, adjust_path, get_difference, get_pairs, get_max_velocities, get_duration_fn, wait_if_gui
+from pb_planning.pybullet_tools.utils import safe_zip, clip, INF, \
+    waypoints_from_path, adjust_path, get_difference, get_pairs, get_max_velocities, get_duration_fn
 
 #ARM_SPEED = 0.15*np.pi # radians / sec
 ARM_SPEED = 0.2 # percent
